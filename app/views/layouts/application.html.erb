@@ -11,6 +11,19 @@
   </head>
 
   <body>
+    <div class = "navbar">
+      <%= link_to lists_path do %>
+        <%= image_tag "popcorn.png", class: "logo" %>
+      <% end %>
+      <div class ="d-flex">
+        <%= link_to new_list_path do %>
+          <p>Add a new list</p>
+        <% end %>
+        <%= link_to lists_path do %>
+          <p>My Lists</p>
+        <% end %>
+      </div>
+    </div>
     <%= yield %>
   </body>
 </html>

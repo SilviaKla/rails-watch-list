@@ -1,0 +1,13 @@
+<div class = "container">
+<h1>Lists</h1>
+
+<%= simple_form_for(@list) do |f| %>
+
+<div class="form-group">
+    <%= f.label :name %>
+    <%= f.text_field :name, class: 'form-control' %>
+  </div>
+
+<%= f.submit class: 'btn btn-primary mt-3' %>
+<% end %>
+</div>
