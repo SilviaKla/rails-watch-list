@@ -23,13 +23,17 @@
   margin: 0;
 }
 
+.card-trip a {
+  color: rgb(255, 7, 7);
+  font-size: 8px;
+}
+
 
 .card-trip .card-trip-infos {
   padding: 16px;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  position: relative;
+  p{
+    margin-top: 10px;
+  }
 }
 
 .card-trip-infos .card-trip-user {
@@ -37,4 +41,26 @@
   right: 16px;
   top: -20px;
   width: 40px;
+}
+
+.comment-container {
+  display: flex;
+  justify-content: space-between;
+
+ .delete {
+    margin-right: 20px;
+    a {
+      padding-left: 4px;
+    }
+  }
+  .comment{
+    margin-bottom: 20px;
+    margin-left: 20px;
+    font-weight: bold;
+    display: flex;
+  }
+  p {
+    padding-left: 4px;
+  }
+
 }

@@ -12,20 +12,24 @@
 
 <div class = "cards">
  <% @list.bookmarks.each do |bookmark|  %>
-<div class="card-trip">
+  <div class="card-trip">
     <img src= <%= bookmark.movie.poster_url%> />
-  <div class="card-trip-infos">
-    <div>
-      <h2><%= bookmark.movie.title %></h2>
-      <p><%= bookmark.movie.overview %></p>
+    <div class="card-trip-infos">
+        <h2><%= bookmark.movie.title %><span class="text-muted font-weight-normal">• <small><%= bookmark.movie.rating %> <i class="fas fa-star star-yellow"></i></small></span></h2>
+        <p><%= bookmark.movie.overview %></p>
     </div>
-      <h2 class="card-trip-pricing"><%= bookmark.movie.rating %></h2>
-       <p>
-        <%= link_to "Delete",
+    <div class= "comment-container">
+      <div class="comment">
+        <i class="fa-solid fa-quote-left"></i>
+        <p><small><%= bookmark.comment %></small></p>
+      </div>
+      <div class="delete">
+        <p><i class="fa-solid fa-trash-can"><%= link_to "Delete",
            bookmark_path(bookmark),
-           data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}%>
-           </p>
-  </div>
+           data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}%></i>
+        </p>
+      </div>
+    </div>
   </div>
 <% end %>
 </div>
